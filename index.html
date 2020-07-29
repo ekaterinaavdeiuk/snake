@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Snake</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@500&display=swap');
+
+        * {
+            margin: 0 auto;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        .container {
+            display: flex;
+            justify-content: center;
+
+        }
+
+        #canvas {
+            width: 800px;
+            height: 600px;
+            border-top: 2px solid #CD5C5C;
+            border-right: 1px solid #CD5C5C;
+            border-left: 2px solid #CD5C5C;
+            border-bottom: 1px solid #CD5C5C;
+            margin-top: 30px;
+            border-radius: 5px;
+        }
+
+        body {
+            background-color: #DDA0DD;
+        }
+
+        .score-container {
+            margin: 0;
+            padding-left: 30px;
+            display: flex;
+            flex-direction: column;
+        }
+
+        .score {
+            width: 100px;
+            height: 50px;
+            border: 2px solid #CD5C5C;
+            background-color: #FFC0CB;
+            border-radius: 5px;
+            text-align: center;
+            padding-top: 10px;
+        }
+
+        .score-text {
+            font-weight: 500;
+            font-family: 'Roboto', sans-serif;
+            color: #CD5C5C;
+            font-size: 20px;
+        }
+
+        h2 {
+            margin-top: 30px;
+            color: #CD5C5C;
+            font-size: 30px;
+            text-align: center;
+            font-weight: 500;
+            font-family: 'Roboto', sans-serif;
+        }
+
+
+        .modal-window {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            position: fixed;
+            top: 0;
+            width: 100%;
+            height: 100vh;
+            border-radius: 0;
+            background-color: rgba(255, 20, 147, 0.5);
+        }
+
+        h1 {
+            color: #800080;
+            font-size: 150px;
+            text-align: center;
+            font-weight: 500;
+            font-family: 'Roboto', sans-serif;
+        }
+
+        .hidden {
+            display: none;
+        }
+
+
+    </style>
+</head>
+<body>
+<div class="container">
+    <div class="score-container">
+        <h2>Score</h2>
+        <div class="score">
+            <p class="score-text">0</p>
+        </div>
+    </div>
+    <canvas id="canvas" width="800" height="600"></canvas>
+    <div class="modal-window hidden">
+        <h1>Game Over</h1>
+    </div>
+</div>
+<script src="snake.js"></script>
+</body>
+</html>
